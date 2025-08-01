@@ -168,8 +168,8 @@ const Assignment = () => {
           </form>
         </div>
       )}
-      <div className="mt-8 overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
-        <table className="min-w-full divide-y divide-gray-300">
+      <div className="mt-12 overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
+        <table className="table-fixed w-full divide-y divide-gray-300">
           <thead className="bg-gray-50">
             <tr>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -199,7 +199,7 @@ const Assignment = () => {
                 const employee = assignment.employeeId;
                 return (
                   <tr key={assignment._id}>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    <td className="px-4 py-4 text-sm text-gray-500 break-words whitespace-normal">
                       {item ? `${item.itemname}` : 'Unknown Item'}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
