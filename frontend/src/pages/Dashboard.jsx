@@ -107,27 +107,27 @@ const Dashboard = () => {
   {/* Recent Assignments Table */}
   <div className="mt-10">
     <h2 className="text-lg font-medium text-gray-900 mb-4">Recent Assignments</h2>
-    <div className="overflow-hidden rounded-lg shadow">
-      <table className="min-w-full divide-y divide-gray-200">
-        <thead className="bg-gray-50">
+    <div className="bg-white shadow rounded-md overflow-hidden mt-6">
+        <table className="w-full text-sm text-left text-gray-700">
+          <thead className="bg-gray-100 border-b">
           <tr>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Item</th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Assigned To</th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+            <th className="px-6 py-3 uppercase font-semibold">Item</th>
+            <th className="px-6 py-3 uppercase font-semibold">Assigned To</th>
+            <th className="px-6 py-3 uppercase font-semibold">Date</th>
+            <th className="px-6 py-3 uppercase font-semibold">Status</th>
           </tr>
         </thead>
-        <tbody className="bg-white divide-y divide-gray-200">
+        <tbody >
           {recentAssignments.length > 0 ? (
             recentAssignments.map((a) => (
               <tr key={a._id}>
-                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                <td className="px-6 py-4 ">
                   {a.itemId?.itemname || 'Unknown Item'}
                 </td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                <td className="px-6 py-4 ">
                   {a.employeeId?.name || 'Unknown Employee'}
                 </td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                <td className="px-6 py-4 ">
                   {a.assignedDate ? new Date(a.assignedDate).toLocaleDateString() : '-'}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
